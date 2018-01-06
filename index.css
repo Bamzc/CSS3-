@@ -1,0 +1,455 @@
+body {
+background: #494A5F;
+color:#D5D6E2;
+font-weight: 500;
+font-size: 1.05em;
+font-family: "微软雅黑","宋体";
+}
+.starability-container {
+  width: 350px;
+  margin:0 auto;
+  padding: 2em 0;
+  border-bottom: 1px solid #D5D6E2;
+}
+.starability-basic {
+  display: block;
+  position: relative;
+  width: 150px;
+  min-height: 60px;
+  padding: 0;
+  border: none
+}
+.starability-basic>input {
+  position: absolute;
+  margin-right: -100%;
+  opacity: 0
+}
+
+.starability-basic>input:checked~label,
+.starability-basic>input:focus~label,
+.starability-basic>input:hover~label {
+  background-position: 0 -30px
+}
+
+.starability-basic>input:focus+label {
+  outline: 1px dotted #999
+}
+.starability-basic>label {
+  position: relative;
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  cursor: pointer;
+  background: url(./icons.png) no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi),
+screen and (-webkit-min-device-pixel-ratio:2) {
+  .starability-basic>label {
+    background-image: url(./icons@2x.png);
+    background-size: 30px auto
+  }
+}
+
+.starability-uproll {
+  display: block;
+  position: relative;
+  width: 150px;
+  padding: 0;
+  border: none;
+}
+.starability-uproll>input{
+  position: absolute;
+  margin-left: -100%;
+  opacity: 0;
+}
+.starability-uproll>input:checked~label,
+.starability-uproll>input:focus~label,
+.starability-uproll>input:hover~label {
+  background-position: 0 -30px;
+}
+.starability-uproll>input:focus+label {
+  outline: 1px dotted #999
+}
+.starability-uproll>label {
+  position: relative;
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  cursor: pointer;
+  background: url(./icons.png) no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi),
+screen and (-webkit-min-device-pixel-ratio:2) {
+  .starability-uproll>label {
+    background-image: url(./icons@2x.png);
+    background-size: 30px auto
+  }
+}
+.starability-uproll>input:checked~label,
+.starability-uproll>input:focus~label,
+.starability-uproll>input:hover~label {
+  transition: background-position .7s
+}
+
+@keyframes a {
+  0% {
+    transform: scale(1)
+  }
+  99% {
+    transform: scale(4);
+    opacity: 0
+  }
+  to {
+    transform: scale(1);
+    opacity: 0
+  }
+}
+.starability-glow {
+  display: block;
+  position: relative;
+  width: 150px;
+  min-height: 60px;
+  padding: 0;
+  border: none
+}
+
+.starability-glow>input {
+  position: absolute;
+  margin-right: -100%;
+  opacity: 0
+}
+
+.starability-glow>input:checked~label,
+.starability-glow>input:focus~label,
+.starability-glow>input:hover~label {
+  background-position: 0 -30px
+}
+
+.starability-glow>input:focus+label {
+  outline: 1px dotted #999
+}
+
+.starability-glow>label {
+  position: relative;
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  cursor: pointer;
+  background-image: url(./icons.png);
+  background-repeat: no-repeat
+}
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi),
+screen and (-webkit-min-device-pixel-ratio:2) {
+  .starability-glow>label {
+    background-image: url(./icons@2x.png);
+    background-size: 30px auto
+  }
+}
+
+.starability-glow>label:before {
+  display: none;
+  position: absolute;
+  content: ' ';
+  width: 30px;
+  height: 30px;
+  background-image: url(./icons.png);
+  background-repeat: no-repeat;
+  bottom: 0
+}
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi),
+screen and (-webkit-min-device-pixel-ratio:2) {
+  .starability-glow>label:before {
+    background-image: url(./icons@2x.png);
+    background-size: 30px auto
+  }
+}
+
+.starability-glow>input:checked+label:before {
+  display: block;
+  animation-duration: 1s;
+  animation-name: a;
+  animation-fill-mode: forwards
+}
+
+@keyframes b {
+  0% {
+    transform: scale(1) rotate(0)
+  }
+  99% {
+    transform: scale(4) rotate(90deg);
+    opacity: 0
+  }
+  to {
+    transform: scale(1) rotate(0);
+    opacity: 0
+  }
+}
+
+.starability-glowRotate {
+  display: block;
+  position: relative;
+  width: 150px;
+  min-height: 60px;
+  padding: 0;
+  border: none
+}
+
+.starability-glowRotate>input {
+  position: absolute;
+  margin-right: -100%;
+  opacity: 0
+}
+
+.starability-glowRotate>input:checked~label,
+.starability-glowRotate>input:focus~label,
+.starability-glowRotate>input:hover~label {
+  background-position: 0 -30px
+}
+
+.starability-glowRotate>input:focus+label {
+  outline: 1px dotted #999
+}
+
+.starability-glowRotate>label {
+  position: relative;
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  cursor: pointer;
+  background-image: url(./icons.png);
+  background-repeat: no-repeat
+}
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi),
+screen and (-webkit-min-device-pixel-ratio:2) {
+  .starability-glowRotate>label {
+    background-image: url(./icons@2x.png);
+    background-size: 30px auto
+  }
+}
+
+.starability-glowRotate>label:before {
+  display: none;
+  position: absolute;
+  content: ' ';
+  width: 30px;
+  height: 30px;
+  background-image: url(./icons.png);
+  background-repeat: no-repeat;
+  bottom: 0
+}
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi),
+screen and (-webkit-min-device-pixel-ratio:2) {
+  .starability-glowRotate>label:before {
+    background-image: url(./icons@2x.png);
+    background-size: 30px auto
+  }
+}
+
+.starability-glowRotate>input:checked+label:before {
+  display: block;
+  animation-duration: 1s;
+  animation-name: b;
+  animation-fill-mode: forwards
+}
+
+@keyframes c {
+  0% {
+    transform: translateY(30px)
+  }
+  80% {
+    opacity: 100%
+  }
+  to {
+    transform: none;
+    opacity: 0
+  }
+}
+
+.starability-fade {
+  display: block;
+  position: relative;
+  width: 150px;
+  min-height: 60px;
+  padding: 0;
+  border: none
+}
+
+.starability-fade>input {
+  position: absolute;
+  margin-right: -100%;
+  opacity: 0
+}
+
+.starability-fade>input:checked~label,
+.starability-fade>input:focus~label,
+.starability-fade>input:hover~label {
+  background-position: 0 -30px
+}
+
+.starability-fade>input:focus+label {
+  outline: 1px dotted #999
+}
+
+.starability-fade>label {
+  position: relative;
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  cursor: pointer;
+  background-image: url(./icons.png);
+  background-repeat: no-repeat
+}
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi),
+screen and (-webkit-min-device-pixel-ratio:2) {
+  .starability-fade>label {
+    background-image: url(./icons@2x.png);
+    background-size: 30px auto
+  }
+}
+
+.starability-fade>label:before {
+  display: none;
+  position: absolute;
+  content: ' ';
+  width: 30px;
+  height: 30px;
+  background-image: url(./icons.png);
+  background-repeat: no-repeat;
+  background-position: 0 -30px;
+  bottom: 30px
+}
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi),
+screen and (-webkit-min-device-pixel-ratio:2) {
+  .starability-fade>label:before {
+    background-image: url(./icons@2x.png);
+    background-size: 30px auto
+  }
+}
+
+.starability-fade>input:checked+label:before {
+  display: block;
+  animation-name: c;
+  animation-duration: 1s;
+  animation-fill-mode: forwards
+}
+
+@keyframes d {
+  0% {
+    transform: translateX(-15px)
+  }
+  60% {
+    opacity: 1
+  }
+  70% {
+    transform: none
+  }
+  80% {
+    opacity: 1
+  }
+  to {
+    opacity: 0
+  }
+}
+
+.starability-checkmark {
+  display: block;
+  position: relative;
+  width: 150px;
+  min-height: 60px;
+  padding: 0;
+  border: none
+}
+
+.starability-checkmark>input {
+  position: absolute;
+  margin-right: -100%;
+  opacity: 0
+}
+
+.starability-checkmark>input:checked~label,
+.starability-checkmark>input:focus~label,
+.starability-checkmark>input:hover~label {
+  background-position: 0 -30px
+}
+
+.starability-checkmark>input:focus+label {
+  outline: 1px dotted #999
+}
+
+.starability-checkmark>label {
+  position: relative;
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  cursor: pointer;
+  background-image: url(./icons-checkmark.png);
+  background-repeat: no-repeat
+}
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi),
+screen and (-webkit-min-device-pixel-ratio:2) {
+  .starability-checkmark>label {
+    background-image: url(../starability-images/icons-checkmark@2x.png);
+    background-size: 30px auto
+  }
+}
+
+.starability-checkmark>label {
+  position: static;
+  z-index: 1
+}
+
+.starability-checkmark>label:before {
+  display: none;
+  position: absolute;
+  content: ' ';
+  width: 30px;
+  height: 30px;
+  background-image: url(./icons-checkmark.png);
+  background-repeat: no-repeat;
+  background-position: 0 -60px;
+  right: -30px
+}
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi),
+screen and (-webkit-min-device-pixel-ratio:2) {
+  .starability-checkmark>label:before {
+    background-image: url(../starability-images/icons-checkmark@2x.png);
+    background-size: 30px auto
+  }
+}
+
+.starability-checkmark>input:checked+label:before {
+  display: block;
+  animation-name: d;
+  animation-duration: .7s;
+  animation-fill-mode: forwards
+}
